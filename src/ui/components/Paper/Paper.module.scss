@@ -1,0 +1,5 @@
+@import "@/ui/styles/mixins.scss";
+
+.paper {
+  @include paper;
+}

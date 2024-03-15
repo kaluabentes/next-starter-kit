@@ -1,0 +1,45 @@
+@import "@/ui/styles/variables.scss";
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  height: 3.75rem;
+  box-shadow: 0 0 #0000, 0 0 #0000, 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid #e5e7eb;
+  background: white;
+  color: $color-text;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.iconButton {
+  width: 3.75rem;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+
+  & svg {
+    fill: rgba(0, 0, 0, 0.4);
+
+    &:hover {
+      fill: $color-text;
+    }
+  }
+}
+
+.title {
+  padding: 0;
+  margin: 0;
+  height: 3.75rem;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 600;
+}

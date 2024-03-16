@@ -16,6 +16,7 @@ import Input from "@/ui/components/Input"
 import Select from "@/ui/components/Select"
 import AppLayout from "@/ui/layouts/AppLayout"
 
+import showToast from "@/utils/showToast"
 import styles from "./CreateUserView.module.scss"
 
 const createUserSchema = yup.object({
@@ -76,7 +77,12 @@ export default function CreateUserView() {
           </div>
         </div>
         <div className={styles.actions}>
-          <Button variant="primary" type="submit" isInline>
+          <Button
+            onClick={() => showToast("Usuário criado com sucesso", "success")}
+            variant="primary"
+            type="submit"
+            isInline
+          >
             Criar usuário
           </Button>
         </div>

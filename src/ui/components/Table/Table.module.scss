@@ -34,9 +34,4 @@
 
 .wrapper {
   overflow: auto;
-  padding: 1.5rem;
-
-  @media (min-width: 768px) {
-    padding: 2rem;
-  }
 }

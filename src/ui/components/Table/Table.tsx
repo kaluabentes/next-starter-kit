@@ -8,6 +8,7 @@ import Skeleton from "../Skeleton"
 interface CommonProps {
   children: ReactNode
   isLoading?: boolean
+  padding?: boolean
 }
 
 const TableSkeleton = () => (
@@ -43,13 +44,17 @@ const TableSkeleton = () => (
   </Table>
 )
 
-export const Table = ({ children, isLoading = false }: CommonProps) => {
+export const Table = ({
+  children,
+  isLoading = false,
+  padding = false,
+}: CommonProps) => {
   if (isLoading) {
     return <TableSkeleton />
   }
 
   return (
-    <Paper className={styles.wrapper}>
+    <Paper className={styles.wrapper} padding={padding}>
       <table className={styles.table}>{children}</table>
     </Paper>
   )

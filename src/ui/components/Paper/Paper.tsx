@@ -8,8 +8,17 @@ import styles from "./Paper.module.scss"
 interface PaperProps {
   className?: string
   children: ReactNode
+  padding?: boolean
 }
 
-export default function Paper({ children, className }: PaperProps) {
-  return <div className={clsx(styles.paper, className)}>{children}</div>
+export default function Paper({
+  children,
+  className,
+  padding = false,
+}: PaperProps) {
+  return (
+    <div className={clsx(styles.paper, padding && styles.padding, className)}>
+      {children}
+    </div>
+  )
 }

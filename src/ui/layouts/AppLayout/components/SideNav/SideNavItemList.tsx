@@ -1,6 +1,6 @@
 import clsx from "clsx"
 import Link from "next/link"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { IconType } from "react-icons"
 import { BiChevronDown } from "react-icons/bi"
 
@@ -25,18 +25,19 @@ export default function SideNavItemList({
   pathname,
 }: SideNavItemListProps) {
   const [isOpen, setIsOpen] = useState(false)
-  const isCollapsed = pathname.includes(rootPath!)
 
   const LinkIcon = icon
+
+  useEffect(() => {
+    if (pathname.includes(rootPath!)) {
+      setIsOpen(true)
+    }
+  }, [pathname, rootPath])
 
   return (
     <div className={styles.container}>
       <button
-        className={clsx(
-          itemStyles.link,
-          styles.link,
-          (isCollapsed || isOpen) && styles.isOpen
-        )}
+        className={clsx(itemStyles.link, styles.link, isOpen && styles.isOpen)}
         key={label}
         onClick={() => setIsOpen((prev) => !prev)}
       >
@@ -45,10 +46,7 @@ export default function SideNavItemList({
         <BiChevronDown className={styles.chevron} />
       </button>
       <div
-        className={clsx(
-          styles.subContainer,
-          (isOpen || isCollapsed) && styles.subContainerOpen
-        )}
+        className={clsx(styles.subContainer, isOpen && styles.subContainerOpen)}
       >
         {items.map((navItem) => {
           return (

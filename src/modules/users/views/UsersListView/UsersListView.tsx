@@ -3,13 +3,13 @@
 import { range } from "lodash"
 import { FaEllipsisV } from "react-icons/fa"
 
-import BackButton from "@/ui/components/BackButton"
-import Button from "@/ui/components/Button"
-import Dropdown from "@/ui/components/Dropdown"
-import Header from "@/ui/components/Header"
-import Heading from "@/ui/components/Heading"
-import { Table } from "@/ui/components/Table"
-import AppLayout from "@/ui/layouts/AppLayout"
+import BackButton from "@/components/BackButton"
+import Button from "@/components/Button"
+import Dropdown from "@/components/Dropdown"
+import Header from "@/components/Header"
+import Heading from "@/components/Heading"
+import { Table } from "@/components/Table"
+import AppLayout from "@/layouts/AppLayout"
 
 interface User {
   id: number

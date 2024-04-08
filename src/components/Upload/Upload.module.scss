@@ -1,0 +1,41 @@
+@import "@/styles/variables.scss";
+@import "@/styles/mixins.scss";
+
+.label {
+  @include input-label;
+
+  margin: 0 0 1rem 0;
+  display: block;
+}
+
+.uploadBox {
+  border: 2px dashed rgba(0, 0, 0, 0.2);
+  padding: 0.75rem 2rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 4px;
+  cursor: pointer;
+
+  & svg {
+    font-size: 6.25rem;
+  }
+
+  & p {
+    &:last-child {
+      margin: 0;
+    }
+  }
+}
+
+.uploadString {
+  margin: 0 0 1rem 0;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.allowedTypes {
+  margin: 0;
+  font-size: 0.875rem;
+  color: $color-text-muted;
+}

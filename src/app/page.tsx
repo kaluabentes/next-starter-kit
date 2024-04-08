@@ -1,6 +1,6 @@
-import Header from "@/ui/components/Header"
-import Heading from "@/ui/components/Heading"
-import AppLayout from "@/ui/layouts/AppLayout"
+import Header from "@/components/Header"
+import Heading from "@/components/Heading"
+import AppLayout from "@/layouts/AppLayout"
 
 export default function Home() {
   return (

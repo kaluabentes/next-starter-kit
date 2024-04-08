@@ -1,0 +1,57 @@
+@import "@/styles/variables.scss";
+
+.button {
+  width: 100%;
+  line-height: auto;
+  padding: 0.625rem 1rem;
+  border: 0;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.875rem;
+  transition: 0.2s;
+  height: 2.5rem;
+}
+
+.inline {
+  display: inline-flex;
+  width: initial;
+}
+
+.primary {
+  background: $color-primary;
+
+  &:hover {
+    background: $color-primary-variant;
+  }
+}
+
+.secondary {
+  background: white;
+  color: $color-text;
+  box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.15);
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.04);
+  }
+}
+
+.success {
+  background: $color-success;
+  color: white;
+
+  &:hover {
+    background: $color-success-variant;
+  }
+}
+
+.ghost {
+  border: none;
+  color: $color-text-muted;
+}

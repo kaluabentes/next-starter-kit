@@ -1,0 +1,17 @@
+@import "@/styles/mixins.scss";
+
+.container {
+  @include input-container;
+}
+
+.label {
+  @include input-label;
+}
+
+.input {
+  @include input-field;
+}
+
+.error {
+  @include input-error;
+}

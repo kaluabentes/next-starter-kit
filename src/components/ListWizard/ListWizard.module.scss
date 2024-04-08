@@ -1,0 +1,90 @@
+@import "@/styles/variables.scss";
+@import "@/styles/mixins.scss";
+
+.container {
+  @include input-container;
+}
+
+.label {
+  @include input-label;
+}
+
+.input {
+  @include input-field;
+  overflow-x: auto;
+  height: initial;
+
+  @media (min-width: 768px) {
+    box-shadow: none;
+  }
+}
+
+.error {
+  @include input-error;
+}
+
+.item {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  padding: 0.2rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding-right: 1rem;
+}
+
+.content {
+  flex: 1;
+  font-weight: 500;
+  word-wrap: nowrap;
+  min-width: 200px;
+}
+
+.order {
+  flex: 1;
+  background: rgba(0, 0, 0, 0.1);
+  font-size: 0.875rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 30px;
+  max-width: 30px;
+  min-height: 30px;
+  border-radius: 3px;
+}
+
+.emptyState {
+  text-align: center;
+  font-weight: 400;
+  font-size: 0.875rem;
+  color: $color-text-muted;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.addButton {
+  display: flex;
+  align-items: center;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  gap: 0.25rem;
+  @include input-label;
+  font-weight: 500;
+  color: $color-text-muted;
+
+  &:hover {
+    color: $color-text;
+  }
+}

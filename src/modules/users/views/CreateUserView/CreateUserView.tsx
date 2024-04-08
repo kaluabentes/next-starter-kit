@@ -4,17 +4,17 @@ import { yupResolver } from "@hookform/resolvers/yup"
 import { useForm } from "react-hook-form"
 import * as yup from "yup"
 
+import BackButton from "@/components/BackButton"
+import Button from "@/components/Button"
+import Header from "@/components/Header"
+import Heading from "@/components/Heading"
+import Input from "@/components/Input"
+import Select from "@/components/Select"
 import {
   EMAIL_INVALID_MESSAGE,
   REQUIRED_FIELD_MESSAGE,
 } from "@/config/messages"
-import BackButton from "@/ui/components/BackButton"
-import Button from "@/ui/components/Button"
-import Header from "@/ui/components/Header"
-import Heading from "@/ui/components/Heading"
-import Input from "@/ui/components/Input"
-import Select from "@/ui/components/Select"
-import AppLayout from "@/ui/layouts/AppLayout"
+import AppLayout from "@/layouts/AppLayout"
 
 import showToast from "@/utils/showToast"
 import styles from "./CreateUserView.module.scss"

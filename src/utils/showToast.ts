@@ -1,5 +1,5 @@
 import { toast, TypeOptions } from "react-toastify"
-import "@fontsource-variable/inter"
+import "@fontsource/geist-sans"
 
 export default function showToast(
   message: string,
@@ -10,7 +10,7 @@ export default function showToast(
     theme: "light",
     type,
     style: {
-      fontFamily: "'Inter Variable', sans-serif",
+      fontFamily: "'Geist Sans', sans-serif",
       fontSize: "0.875rem",
       lineHeight: "1.5",
     },

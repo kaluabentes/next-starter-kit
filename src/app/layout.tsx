@@ -1,8 +1,8 @@
-import { GeistSans } from "geist/font/sans"
 import type { Metadata } from "next"
 
 import "@/styles/global.scss"
 
+import { poppins } from "./fonts"
 import Providers from "./providers"
 
 export const metadata: Metadata = {
@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={GeistSans.className}>
+      <body className={`${poppins.className} antialiased`}>
         <Providers>{children}</Providers>
       </body>
     </html>

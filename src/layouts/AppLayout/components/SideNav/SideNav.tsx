@@ -4,6 +4,7 @@ import Link from "next/link"
 
 import { NavItem } from "@/config/navItems"
 
+import { APP_TITLE } from "@/config/settings"
 import styles from "./SideNav.module.scss"
 import SideNavItemList from "./SideNavItemList"
 import Paragraph from "../../../../components/Paragraph"
@@ -32,7 +33,7 @@ export default function SideNav({
       <div className={styles.sideNav}>
         <header className={styles.header}>
           <Link href="/" className={styles.brand}>
-            <h2>UI Kit</h2>
+            <h2>{APP_TITLE}</h2>
           </Link>
         </header>
         <nav className={styles.nav}>

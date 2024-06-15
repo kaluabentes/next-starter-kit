@@ -1,5 +1,5 @@
-import { Banknote, Home, ListPlus, User, Warehouse } from "lucide-react"
 import { ReactNode } from "react"
+import { BiHome } from "react-icons/bi"
 
 export interface NavItem {
   rootPath?: string
@@ -14,43 +14,28 @@ export interface NavSubItem {
   href: string
 }
 
-const navItems = [
+const navItems: NavItem[] = [
   {
     label: "Home",
     href: "/",
-    icon: <Home size={22} />,
+    icon: <BiHome />,
   },
-  {
-    label: "Pagamentos",
-    href: "/payments",
-    icon: <Banknote size={22} />,
-  },
-  {
-    label: "Casas",
-    href: "/houses",
-    icon: <Warehouse size={22} />,
-  },
-  {
-    label: "Perfil",
-    href: "/profile",
-    icon: <User size={22} />,
-  },
-  {
-    label: "Mais",
-    rootPath: "/users",
-    href: "#",
-    icon: <ListPlus size={22} />,
-    items: [
-      {
-        label: "Listar",
-        href: "/users",
-      },
-      {
-        label: "Criar novo",
-        href: "/users/create",
-      },
-    ],
-  },
+  // {
+  //   label: "Mais",
+  //   rootPath: "/users",
+  //   href: "#",
+  //   icon: <ListPlus size={22} />,
+  //   items: [
+  //     {
+  //       label: "Listar",
+  //       href: "/users",
+  //     },
+  //     {
+  //       label: "Criar novo",
+  //       href: "/users/create",
+  //     },
+  //   ],
+  // },
 ]
 
 export default navItems

@@ -76,7 +76,7 @@ export default function SideNav({
           />
           <Paragraph>
             {accountName},{" "}
-            <Link onClick={onLogout} href="#">
+            <Link className={styles.logoutButton} onClick={onLogout} href="#">
               Sair
             </Link>
           </Paragraph>

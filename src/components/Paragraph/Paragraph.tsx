@@ -10,6 +10,7 @@ interface ParagraphProps {
   children: ReactNode
   weight?: "normal" | "medium" | "bold"
   variant?: "normal" | "muted"
+  size?: "normal" | "small"
 }
 
 const weights = {
@@ -23,11 +24,17 @@ const variants = {
   muted: styles.mutedVariant,
 }
 
+const sizes = {
+  normal: styles.sizeNormal,
+  small: styles.sizeSmall,
+}
+
 export default function Paragraph({
   className,
   children,
   weight = "normal",
   variant = "normal",
+  size = "normal",
 }: ParagraphProps) {
   return (
     <p
@@ -35,6 +42,7 @@ export default function Paragraph({
         styles.paragraph,
         weights[weight],
         variants[variant],
+        sizes[size],
         className
       )}
     >

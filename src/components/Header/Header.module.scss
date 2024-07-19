@@ -12,7 +12,7 @@
     display: flex;
   }
 
-  @media (min-width: $breakpoint-desktop-min) {
+  @media (min-width: $breakpoint-desktop) {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;

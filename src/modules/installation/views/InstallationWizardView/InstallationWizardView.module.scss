@@ -1,3 +1,34 @@
+@import "@/styles/functions/rem.scss";
+@import "@/styles/variables.scss";
+
 .card {
-  padding: 1.5rem;
+  padding: rem(24);
+  max-width: rem(450);
+  margin: 0 auto;
+
+  @media (min-width: $breakpoint-tablet) {
+    margin: rem(48) auto;
+  }
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: rem(4);
+}
+
+.heading {
+  font-size: rem(24);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: rem(24);
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: rem(16);
 }

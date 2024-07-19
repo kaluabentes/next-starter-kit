@@ -2,9 +2,10 @@
 
 .wrapper {
   display: flex;
+  flex-direction: column;
 
-  @media (max-width: $breakpoint-desktop-max) {
-    flex-direction: column;
+  @media (min-width: $breakpoint-desktop) {
+    flex-direction: row;
   }
 }
 
@@ -15,7 +16,7 @@
   flex: 1;
   overflow: auto;
 
-  @media (min-width: $breakpoint-desktop-min) {
+  @media (min-width: $breakpoint-desktop) {
     height: 100vh;
     margin-top: 0;
   }
